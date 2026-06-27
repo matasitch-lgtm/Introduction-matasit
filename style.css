@@ -1,0 +1,181 @@
+
+        @font-face {
+        font-family: "IBMPlexSansThai-Regular";
+        src: url("./fonts/IBMPlexSansThai-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        *{
+            font-family: "IBMPlexSansThai-Regular";
+        }
+        @media screen and (max-width: 1000px) {
+            .header-container .navbar {
+                flex-direction: column;
+            }
+        }
+        body {
+            background-image: url('bg1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .header{
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+    
+        }
+        .Grid-container{
+            color: #000000;
+            background-color: #346EEA;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%); /* Center the container */
+            display: grid; /* Use grid layout */
+            width: 600px;
+            padding-left: 50px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-radius: 50px; /* Rounded corners */
+            grid-template-columns: 160px 1fr; /* Two columns: first column fixed width, second column flexible */
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+        }
+        .navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%); /* Center the container */
+            border-radius: 10px;
+            opacity: 0.8;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.35 );
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+        }
+        .navbar li a {
+            display: block;
+            padding: 10px;
+            color: #000000;
+            font-size: 20px;
+            padding: 14px 16px;
+            margin: 10px;;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            background: rgba(82, 71, 101, 0.378);
+            border: 1px solid rgba(255, 255, 255, 0.35 );
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+        }
+        .navbar li a:hover {
+            background-color: #23babc;
+            color: #ffffff;
+
+        }
+        .Grid-container .item {
+            font-size: 20px;    
+            font-weight: bold;
+
+        }
+        .Grid-container .item2{
+            font-size: 20px;
+            font-weight: normal;
+        }
+        .S2-container { 
+            list-style-type: none; /* Remove default list styling */
+            padding: 0; /* Remove default padding */
+            margin: 0; /* Remove default margin */
+            width: 800px;
+            padding-left: 50px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 50px; /* Rounded corners */
+            position: relative; /* Position the container relative to its parent */
+            left: 50%; /* Center the container horizontally */
+            transform: translateX(-50%); /* Center the container horizontally */    
+            opacity: 0.8;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.35 );
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+        }
+        .S3-container { 
+            list-style-type: none; /* Remove default list styling */
+            padding: 0; /* Remove default padding */
+            margin: 0; /* Remove default margin */
+            
+            width: 1200px;
+            padding-left: 50px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 50px; /* Rounded corners */
+            position: relative; /* Position the container relative to its parent */
+            left: 50%; /* Center the container horizontally */
+            transform: translateX(-50%); /* Center the container horizontally */    
+           
+            opacity: 0.8;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.35 );
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+
+            display: grid; /* Use grid layout */
+            grid-template-columns: 1fr 1fr;
+        }
+
+        
+        .S2-container ::before, .S3-container ::before {
+            content: "•"; /* Add a bullet point */
+            color: #000; /* Set the bullet color */
+            font-size: 20px; /* Set the bullet size */
+            margin-right: 10px; /* Add space between bullet and text */
+        }
+
+        .S2-container .item2 {
+            font-size: 20px;
+            font-weight: normal;
+            display: flex;
+        }
+        .S3-container .item2 {
+            font-size: 20px;
+            font-weight: normal;
+            display: flex;
+        }
+        .profile-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            flex-direction: row;
+            row-gap: 20px; /* Add space between buttons */
+            column-gap: 20px; /* Add space between buttons */
+        }
+        .profile-img  {
+            border-radius: 50%;
+            object-fit: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+
+
