@@ -9,11 +9,7 @@
         *{
             font-family: "IBMPlexSansThai-Regular";
         }
-        @media screen and (max-width: 1000px) {
-            .header-container .navbar {
-                flex-direction: column;
-            }
-        }
+ 
         body {
             background-image: url('bg1.png');
             background-size: cover;
@@ -22,41 +18,42 @@
             background-attachment: fixed;
         }
         .header{
+            margin: 5px;
             font-size: 30px;
             font-weight: bold;
             text-align: center;
-    
         }
+
         .Grid-container{
             color: #000000;
             background-color: #346EEA;
             position: relative;
-            left: 50%;
-            transform: translateX(-50%); /* Center the container */
             display: grid; /* Use grid layout */
-            width: 600px;
+            width: 700px;
             padding-left: 50px;
             padding-top: 20px;
             padding-bottom: 20px;
             border-radius: 50px; /* Rounded corners */
-            grid-template-columns: 160px 1fr; /* Two columns: first column fixed width, second column flexible */
+            grid-template-columns: 200px 1fr; /* Two columns: first column fixed width, second column flexible */
             background: rgba(255, 255, 255, 0.18);
             border: 1px solid rgba(255, 255, 255, 0.35);
             backdrop-filter: blur(12px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
         }
         .navbar {
-            list-style-type: none;
+            list-style-type: none;  
             margin: 0;
             padding: 0;
+            width: 600px;
             display: flex;
             flex-direction: row;
             position: relative;
+            justify-content: center;
             left: 50%;
             transform: translateX(-50%); /* Center the container */
             border-radius: 10px;
             opacity: 0.8;
-            background: rgba(255, 255, 255, 0.18);
+            background: rgba(104, 151, 134, 0.203);
             border: 1px solid rgba(255, 255, 255, 0.35 );
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
@@ -67,12 +64,12 @@
             padding: 10px;
             color: #000000;
             font-size: 20px;
-            padding: 14px 16px;
+            padding: 10px 40px;
             margin: 10px;;
             text-decoration: none;
             font-weight: bold;
             border-radius: 10px;
-            background: rgba(82, 71, 101, 0.378);
+            background: rgba(18, 144, 112, 0.715);
             border: 1px solid rgba(255, 255, 255, 0.35 );
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
@@ -89,19 +86,25 @@
 
         }
         .Grid-container .item2{
+            color: #021818;
             font-size: 20px;
             font-weight: normal;
         }
-        .S2-container { 
+        .Grid-container .item3{
+            color: #021818;
+            font-size: 20px;
+            font-weight: normal;
+            margin-top: 20px;
+        }
+        .S2-container {
+            color:#021818;
             list-style-type: none; /* Remove default list styling */
             padding: 0; /* Remove default padding */
             margin: 0; /* Remove default margin */
-            width: 800px;
+            width: 375px;
             padding-left: 50px;
             padding-top: 20px;
             padding-bottom: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
             border-radius: 50px; /* Rounded corners */
             position: relative; /* Position the container relative to its parent */
             left: 50%; /* Center the container horizontally */
@@ -113,7 +116,7 @@
             -webkit-backdrop-filter: blur(12px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
         }
-        .S3-container { 
+        .S3-container ,.S3-1-container { 
             list-style-type: none; /* Remove default list styling */
             padding: 0; /* Remove default padding */
             margin: 0; /* Remove default margin */
@@ -162,20 +165,88 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 20px;
-            margin-bottom: 20px;
             flex-direction: row;
             row-gap: 20px; /* Add space between buttons */
             column-gap: 20px; /* Add space between buttons */
+        button {
+                padding: 10px 20px;
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                border-radius: 12px;
+
+                color: #ffffff;
+                background: rgba(52, 110, 234, 0.75);
+                backdrop-filter: blur(10px);
+
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+
+                transition: 0.25s ease;
+        }
+
+        button:hover {
+            background: #23babc;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        button:active {
+            transform: translateY(0);
+            box-shadow: none;
+        }
         }
         .profile-img  {
             border-radius: 50%;
+            width: 150;
             object-fit: cover;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
         }
+        .Block-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            grid-template-rows: 1fr auto;
+            align-items: start;
+            width: min(90%, 1300px);
+            margin: 20px auto;
+        }
 
+        .S2-1-container {
+            margin: 20;
+            padding: 10;
+
+        }
+        @media screen and (max-width: 1000px) {
+            .navbar {
+                width: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        @media screen and (max-width: 1200px) {
+            .S2-container {
+                list-style-type: none;  
+                margin: auto;
+                width: min(90%, 1200px);
+                padding: 16px 20px;
+                border-radius: 24px; /* Rounded corners */
+            }
+            .Grid-container {
+                list-style-type: none;  
+                margin: auto;
+                width: min(90%, 1200px);
+                border-radius: 24px; /* Rounded corners */
+            }
+            .S2-container .item2 {
+                font-size: 16px;
+
+            }
+            .Block-header {
+                grid-template-columns: 1fr;
+            }
+        }
 
 
