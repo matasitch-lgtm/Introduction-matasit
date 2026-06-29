@@ -32,3 +32,17 @@ async function getStocks() {
         console.error(error);
     }
 }
+
+function showProject(image, title, detail) {
+    const dialog = document.querySelector("#project-dialog");
+
+    document.querySelector("#project-image").src = image;
+    document.querySelector("#project-title").textContent = title;
+    document.querySelector("#project-detail").textContent = detail;
+
+    dialog.showModal();
+}
+
+function closeProject() {
+    document.querySelector("#project-dialog").close();
+}

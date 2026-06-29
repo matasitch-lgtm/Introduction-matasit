@@ -19,9 +19,11 @@
         }
         .header{
             margin: 5px;
-            font-size: 30px;
+            text-shadow: #96bce1 1px 0 10px;
+            font-size: 40px;
             font-weight: bold;
             text-align: center;
+          
         }
 
         .Grid-container{
@@ -31,6 +33,7 @@
             display: grid; /* Use grid layout */
             width: 700px;
             padding-left: 50px;
+            padding-right: 20px;
             padding-top: 20px;
             padding-bottom: 20px;
             border-radius: 50px; /* Rounded corners */
@@ -62,14 +65,14 @@
         .navbar li a {
             display: block;
             padding: 10px;
-            color: #000000;
+            color: #ffffff;
             font-size: 20px;
             padding: 10px 40px;
             margin: 10px;;
             text-decoration: none;
             font-weight: bold;
             border-radius: 10px;
-            background: rgba(18, 144, 112, 0.715);
+            background: rgba(4, 66, 35, 0.715);
             border: 1px solid rgba(255, 255, 255, 0.35 );
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
@@ -97,23 +100,16 @@
             margin-top: 20px;
         }
         .S2-container {
+            margin-left: 20px;
             color:#021818;
-            list-style-type: none; /* Remove default list styling */
-            padding: 0; /* Remove default padding */
-            margin: 0; /* Remove default margin */
-            width: 375px;
-            padding-left: 50px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            border-radius: 50px; /* Rounded corners */
             position: relative; /* Position the container relative to its parent */
             left: 50%; /* Center the container horizontally */
             transform: translateX(-50%); /* Center the container horizontally */    
-            opacity: 0.8;
-            background: rgba(255, 255, 255, 0.18);
-            border: 1px solid rgba(255, 255, 255, 0.35 );
+            opacity: 0.87;
+            background: rgba(255, 255, 255, 0.50);
+            border: 1px solid rgba(255, 255, 255, 0.50 );
+            border-radius: 20px;
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
         }
         .S3-container ,.S3-1-container { 
@@ -152,6 +148,7 @@
         }
 
         .S2-container .item2 {
+            padding-left: 20px;;
             font-size: 20px;
             font-weight: normal;
             display: flex;
@@ -174,14 +171,16 @@
                 border-radius: 12px;
 
                 color: #ffffff;
-                background: rgba(52, 110, 234, 0.75);
-                backdrop-filter: blur(10px);
+                background: rgba(8, 33, 86, 0.75);
+                backdrop-filter: blur(12px);
 
                 font-size: 16px;
                 font-weight: bold;
                 cursor: pointer;
 
                 transition: 0.25s ease;
+                border: 1px solid rgba(255, 255, 255, 0.50 );
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
         }
 
         button:hover {
@@ -204,19 +203,86 @@
             flex-direction: column;
         }
         .Block-header {
-            display: grid;
+            display: grid;  
             grid-template-columns: 1fr 1fr ;
             grid-template-rows: 1fr auto;
             align-items: start;
             width: min(90%, 1300px);
             margin: 20px auto;
+
         }
 
         .S2-1-container {
-            margin: 20;
-            padding: 10;
-
+            width: 200px;
+            height: 50px;
+            margin-top: 20px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            opacity: 0.8;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.892);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
         }
+        #stock-list{
+            background-color: #ffffff;
+            width: 150px;
+        }
+
+        #project-dialog {
+            width: min(90%, 900px);
+            padding: 24px;
+            border: none;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        #project-image {
+            display: block;
+            width: 100%;
+            max-height: 65vh;
+            object-fit: contain;
+            margin: auto;
+        }
+
+        #project-dialog::backdrop {
+            background: rgba(0, 0, 0, 0.75);
+        }
+        .Project-card {
+            padding: 12px;
+            border-radius: 16px;
+            cursor: pointer;
+            text-align: center;
+            transition: 0.25s;
+        }
+
+        .Project-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            transition: 0.25s;
+        }
+
+        .Project-card p {
+            margin: 8px 0 0;
+            font-weight: bold;
+        }
+
+        .Project-card:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .Project-card:hover img {
+            transform: scale(1.03);
+        }
+
+        .Project-card:active {
+            transform: translateY(0);
+        }
+        
         @media screen and (max-width: 1000px) {
             .navbar {
                 width: auto;

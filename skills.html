@@ -23,10 +23,38 @@
         <div class = "item2">สามารถใช้โปรแกรม PowerFactory วิเคราะห์ระบบไฟฟ้า <br>ประยุกต์ใช้กับ Python</div>
     </div>
     <div class="S3-1-container">
-        <div class = "item2"><img src="./images/skill1.png" alt="Skill 1" width="auto" height="300"></div>
-        <div class = "item2"><img src="./images/skill2.png" alt="Skill 2" width="auto" height="300"></div>
-        <div class = "item2"><img src="./images/skill3.png" alt="Skill 3" width="auto" height="300"></div>
-        <div class = "item2"><img src="./images/skill4.png" alt="Skill 4" width="auto" height="300"></div>
+        <div class = "Project-card"><img src="./images/skill1.png" width="auto" height="300" 
+            onclick="showProject(
+                this.src,
+                'PowerFactory Digsilent with Python',
+                'เชื่อมต่อ Python กับ PowerFactory เพื่อใช้การคำนวณ Power Flow จากการเพิ่มโหลด Data center หลาย ๆ ครั้ง และ Plot Graph ผลการวิเคราะห์'
+            )">
+            <p>คลิกที่รูปเพื่อดูรายละเอียด</p>  
+        </div>
+        <div class = "Project-card"><img src="./images/skill3.png" width="auto" height="300" 
+            onclick="showProject(
+                this.src,
+                'Web Application Kanbanboard',
+                'เป็น Web Application ที่พัฒนาโดยใช้ AI Vibe coding เพื่อนำมาใช้ติดตามงานภายในแผนก คล้าย ๆ Trello แต่สร้าง Features เพิ่มให้ตอบโจทย์กับการใช้งานที่มากขึ้น แต่ยังคงต้องการความรู้จากการเข้าร่วม Dev pool มาพัฒนาร่วมกับการใช้ AI'
+            )">
+            <p>คลิกที่รูปเพื่อดูรายละเอียด</p>
+        </div>
+        <div class = "Project-card"><img src="./images/skill4.png" width="auto" height="300" 
+            onclick="showProject(
+                this.src,
+                'Web Dashboard',
+                'ใช้การเขียนโปรแกรม โดย AI เพื่อคำนวณตาม Logic ที่ต้องการ และนำข้อมูลที่ได้ทำ Dashboard สำหรับแสดงการบริหารจัดการของหม้อแปลง Reuse ในโครงการ คปอ.1 เพื่อประเมินผลการประหยัดต้นทุน'
+            )">
+            <p>คลิกที่รูปเพื่อดูรายละเอียด</p>
+        </div>
     </div>
+    <dialog id="project-dialog">
+        <img id="project-image" alt="ภาพผลงาน">
+
+        <h2 id="project-title"></h2>
+        <p id="project-detail"></p>
+
+        <button onclick="closeProject()">ปิด</button>
+    </dialog>
 </body>
 </html>
