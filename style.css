@@ -37,7 +37,7 @@
             color: #000000;
             position: relative;
             display: grid; /* Use grid layout */
-            width: 700px;
+            width: 100%;
             padding-left: 20px;
             padding-right: 20px;
             padding-top: 20px;
@@ -73,7 +73,7 @@
             color: #ffffff;
             font-size: 20px;
             padding: 10px 40px;
-            margin: 10px;;
+            margin: 10px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 10px;
@@ -118,20 +118,17 @@
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
         }
         .S3-container ,.S3-1-container { 
-            list-style-type: none; /* Remove default list styling */
             padding: 0; /* Remove default padding */
             margin: 0; /* Remove default margin */
             
-            width: 1200px;
+            
             padding-left: 50px;
             padding-top: 20px;
             padding-bottom: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            width: min(90%, 1200px);
+            margin: 20px auto;
             border-radius: 50px; /* Rounded corners */
-            position: relative; /* Position the container relative to its parent */
-            left: 50%; /* Center the container horizontally */
-            transform: translateX(-50%); /* Center the container horizontally */    
+
            
             opacity: 0.8;
             background: rgba(255, 255, 255, 0.18);
@@ -153,7 +150,7 @@
         }
 
         .S2-container .item2 {
-            padding-left: 20px;;
+            padding-left: 20px;
             font-size: 20px;
             font-weight: normal;
             display: flex;
@@ -162,6 +159,12 @@
             font-size: 20px;
             font-weight: normal;
             display: flex;
+        }
+        .profile {
+            width: auto;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
         }
         .profile-buttons {
             display: flex;
@@ -184,7 +187,6 @@
                 cursor: pointer;
 
                 transition: 0.25s ease;
-                border: 1px solid rgba(255, 255, 255, 0.50 );
                 box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
         }
 
@@ -284,7 +286,7 @@
         .Project-card:active {
             transform: translateY(0);
         }
-        @media screen and (max-width: 600px)  {    
+        @media screen and (max-width: 1200px)  {    
             body {
                 margin: 8px;
             }
@@ -293,7 +295,7 @@
                 font-size: 28px;
             }
         }
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 1200px) {
             .navbar {
                 width: 90%;
                 left: auto;
@@ -303,21 +305,23 @@
                 align-items: center;
             }
         }
-        @media screen and (max-width: 600px) {
-            .S2-container, .S3-container, .S3-1-container,.Grid-container{  
+        @media screen and (max-width: 1200px) {
+            .S2-container, .S3-container, .S3-1-container{  
                 grid-template-columns: 1fr;
                 width: 90%;
                 margin: 20px auto;
                 padding: 16px;
                 left: auto;
                 transform: none;
-        
                 
             }
+        }
+        @media screen and (max-width: 600px) {
             .Grid-container {
-                margin: auto;
-                width: min(90%, 1200px);
-                
+                grid-template-columns: 1fr;
+                width: 90%;
+                margin: 20px auto;
+                padding: 16px;
             }
             .S2-container .item2 {
                 font-size: 16px;
@@ -333,8 +337,14 @@
             }
             .Block-header {
                 grid-template-columns: 1fr;
+                gap: 20px;
+            
             }
         }
+    .Grid-container .header-1,
+    .Grid-container .item3 {
+    grid-column: 1 / -1;
+}
 
 *,
 *::before,
