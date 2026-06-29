@@ -293,12 +293,19 @@
             }
         }
         @media screen and (max-width: 1200px) {
-            .S2-container {
+            body {
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .S2-container, .S3-container, .S3-1-container {
                 list-style-type: none;  
-                margin: auto;
+
+                grid-template-columns: 1fr;
                 width: min(90%, 1200px);
                 padding: 16px 20px;
                 border-radius: 24px; /* Rounded corners */
+                
             }
             .Grid-container {
                 list-style-type: none;  
