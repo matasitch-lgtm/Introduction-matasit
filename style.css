@@ -293,14 +293,8 @@
             }
         }
         @media screen and (max-width: 1200px) {
-            body {
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-            }
-            .S2-container, .S3-container, .S3-1-container {
+            .S2-container, .S3-container, .S3-1-container,.Block-header {
                 list-style-type: none;  
-
                 grid-template-columns: 1fr;
                 width: min(90%, 1200px);
                 padding: 16px 20px;
